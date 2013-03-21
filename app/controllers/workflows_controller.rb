@@ -4,19 +4,39 @@ class WorkflowsController < ApplicationController
   end
 
   def github
-    begin
-      token = github_client.auth_code.get_token(params[:code])
-      user = JSON.parse(token.get('https://api.github.com/user').body)
-      @github_username = user['login']
-      @github_display_name = user['name'] || @github_username
-      @github_avatar = user['avatar_url']
-    rescue OAuth2::Error => e
-      puts e
-      redirect_to code_path
-    end
+    @github = github_info
+  end
+
+  def finish
+    github = github_info
+
+    user = User.find_or_create_by_username(github[:username])
+    user.avatar = github[:avatar]
+    user.displayname = github[:display]
+    user.bio = params[:bio]
+    user.save!
+
+    redirect_to "/#{user.username}"
   end
 
   private
+
+  def github_info
+    session[:github] ||= begin
+      token = github_client.auth_code.get_token(params[:code])
+      user = JSON.parse(token.get('https://api.github.com/user').body)
+
+      {
+        username: user['login'],
+        display: user['name'] || user['login'],
+        avatar: user['avatar_url']
+      }
+    rescue OAuth2::Error => e
+      puts e
+      redirect_to code_workflow_path
+      nil
+    end
+  end
 
   def github_client(endpoint = 'https://github.com')
     OAuth2::Client.new(

@@ -6,5 +6,8 @@ ThirtySevenSignalsCoversiteGenerator::Application.routes.draw do
     get 'code'
     get 'lol'
     get 'github'
+    post 'finish'
   end
+
+  get '/:user', to: "user#show"
 end

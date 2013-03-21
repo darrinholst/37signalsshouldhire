@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 
 gem 'prototype-rails'
+gem 'html-pipeline', :git => 'https://github.com/darrinholst/html-pipeline.git'
 gem 'json'
 gem 'oauth2'
 gem 'thin'
