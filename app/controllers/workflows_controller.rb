@@ -1,6 +1,6 @@
 class WorkflowsController < ApplicationController
   def code
-    @authorize_url = github_client.auth_code.authorize_url(:redirect_uri => github_url)
+    @authorize_url = github_client.auth_code.authorize_url(:redirect_uri => github_workflow_url)
   end
 
   def github

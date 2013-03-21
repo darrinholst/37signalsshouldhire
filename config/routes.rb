@@ -5,6 +5,6 @@ ThirtySevenSignalsCoversiteGenerator::Application.routes.draw do
     get 'questions'
     get 'code'
     get 'lol'
-    get 'github', as: 'github'
+    get 'github'
   end
 end
