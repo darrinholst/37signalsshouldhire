@@ -61,5 +61,7 @@ module ThirtySevenSignalsCoversiteGenerator
 
     # additional top level assets to precompile
     config.assets.precompile += %w(modernizr.js)
+
+    config.google_analytics = false
   end
 end
