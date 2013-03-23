@@ -1,16 +1,3 @@
-GIT
-  remote: https://github.com/darrinholst/html-pipeline.git
-  revision: 0be9d4b2b61b51cfaf75e23784a88cacaa766cc2
-  specs:
-    html-pipeline (0.0.6)
-      activesupport (>= 2)
-      escape_utils (~> 0.2)
-      gemoji (~> 1.0)
-      github-markdown (~> 0.5)
-      nokogiri (~> 1.4)
-      rinku (~> 1.7)
-      sanitize (~> 2.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -72,7 +59,7 @@ GEM
     debug_inspector (0.0.2)
     erubis (2.7.0)
     escape_utils (0.3.2)
-    eventmachine (1.0.1)
+    eventmachine (1.0.3)
     execjs (1.4.0)
       multi_json (~> 1.0)
     faraday (0.8.6)
@@ -83,6 +70,14 @@ GEM
     gemoji (1.4.0)
     github-markdown (0.5.3)
     hike (1.2.1)
+    html-pipeline (0.0.10)
+      activesupport (>= 2)
+      escape_utils (~> 0.3)
+      gemoji (~> 1.0)
+      github-markdown (~> 0.5)
+      nokogiri (~> 1.4)
+      rinku (~> 1.7)
+      sanitize (~> 2.0)
     httpauth (0.2.0)
     i18n (0.6.1)
     journey (1.0.4)
@@ -94,15 +89,16 @@ GEM
     less-rails (2.3.2)
       actionpack (>= 3.1)
       less (~> 2.3.1)
-    libv8 (3.11.8.13)
+    libv8 (3.11.8.17)
     mail (2.5.3)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.21)
-    multi_json (1.7.1)
+    multi_json (1.7.2)
     multi_xml (0.5.3)
     multipart-post (1.2.0)
+    newrelic_rpm (3.6.0.78)
     nokogiri (1.5.9)
     oauth2 (0.9.1)
       faraday (~> 0.8)
@@ -158,7 +154,7 @@ GEM
     therubyracer (0.11.4)
       libv8 (~> 3.11.8.12)
       ref
-    thin (1.5.0)
+    thin (1.5.1)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
       rack (>= 1.0.0)
@@ -188,9 +184,10 @@ DEPENDENCIES
   compass-rails
   execjs
   foreman
-  html-pipeline!
+  html-pipeline
   json
   less-rails
+  newrelic_rpm
   oauth2
   pg
   prototype-rails

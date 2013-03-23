@@ -4,7 +4,7 @@ gem 'rails', '3.2.13'
 
 gem 'browsernizer'
 gem 'prototype-rails'
-gem 'html-pipeline', :git => 'https://github.com/darrinholst/html-pipeline.git'
+gem 'html-pipeline'
 gem 'json'
 gem 'oauth2'
 gem 'thin'
@@ -22,6 +22,7 @@ end
 
 group :production do
   gem 'pg'
+  gem 'newrelic_rpm'
 end
 
 group :assets do
