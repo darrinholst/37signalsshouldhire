@@ -48,6 +48,9 @@ GEM
       erubis (>= 2.6.6)
     binding_of_caller (0.7.1)
       debug_inspector (>= 0.0.1)
+    browser (0.1.6)
+    browsernizer (0.2.0)
+      browser (~> 0.1.4)
     builder (3.0.4)
     chunky_png (1.2.7)
     coderay (1.0.9)
@@ -180,6 +183,7 @@ DEPENDENCIES
   awesome_print
   better_errors
   binding_of_caller
+  browsernizer
   coffee-rails
   compass-rails
   execjs
