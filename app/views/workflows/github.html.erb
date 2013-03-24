@@ -1,11 +1,11 @@
 <div class="hero-unit code">
   <h1>You're almost done!</h1>
   <p>Just between you and me I'm not really going to generate anything for you, but you're more than welcome to type stuff in yourself below. I'll even parse it with markdown.</p>
+
   <hr>
-  <img src="<%= @github[:avatar] %>"><h3><%= @github[:display] %></h3>
 
   <%= form_tag '/finish' %>
-    <textarea name="bio"></textarea>
+    <textarea name="bio"><%= @user.bio if @user %></textarea>
     <input type="submit" class="btn btn-large btn-success" value="Get me my job!">
   </form>
 </div>

@@ -5,6 +5,7 @@ class WorkflowsController < ApplicationController
 
   def github
     @github = github_info
+    @user = User.find_by_username(@github[:username])
   end
 
   def finish
