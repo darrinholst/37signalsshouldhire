@@ -2,14 +2,14 @@
   <h1>A few quick questions to get to know you first</h1>
   <p>Don't worry, they probably won't be held against you.</P>
   <ul class="questions">
-    <%= render partial: "question", locals: {question: "What is your favorite web framework?", correct: "Rails", incorrect: "Merb"} %>
-    <%= render partial: "question", locals: {question: "Did you create rubygems.org?", correct: "Yes", incorrect: "No"} %>
-    <%= render partial: "question", locals: {question: "What is your favorite javascript framework?", correct: "Prototype", incorrect: "jQuery"} %>
-    <%= render partial: "question", locals: {question: "What is your favorite coupon site?", correct: "Groupon", incorrect: "LivingSocial"} %>
-    <%= render partial: "question", locals: {question: "How about a favorite testing framework?", correct: "Test::Unit", incorrect: "RSpec"} %>
-    <%= render partial: "question", locals: {question: "What kind of racing do you prefer?", correct: "LMP2", incorrect: "NASCAR"} %>
-    <%= render partial: "question", locals: {question: "What'd ya think of that YFT?", correct: "Pretty Sweet", incorrect: "What's a YFT"} %>
-    <%= render partial: "question", locals: {question: "Are you fucking comfortable with foul language?", correct: "Fuck Yeah!", incorrect: "My mom doesn't like me to curse"} %>
+    <%= render partial: "question", locals: {name: "q1", question: "What is your favorite web framework?", correct: "Rails", incorrect: "Merb"} %>
+    <%= render partial: "question", locals: {name: "q2", question: "Did you create rubygems.org?", correct: "Yes", incorrect: "No"} %>
+    <%= render partial: "question", locals: {name: "q3", question: "What is your favorite javascript framework?", correct: "Prototype", incorrect: "jQuery"} %>
+    <%= render partial: "question", locals: {name: "q4", question: "What is your favorite coupon site?", correct: "Groupon", incorrect: "LivingSocial"} %>
+    <%= render partial: "question", locals: {name: "q5", question: "How about a favorite testing framework?", correct: "Test::Unit", incorrect: "RSpec"} %>
+    <%= render partial: "question", locals: {name: "q6", question: "What kind of racing do you prefer?", correct: "LMP2", incorrect: "NASCAR"} %>
+    <%= render partial: "question", locals: {name: "q7", question: "What'd ya think of that YFT?", correct: "Pretty Sweet", incorrect: "What's a YFT"} %>
+    <%= render partial: "question", locals: {name: "q8", question: "Are you fucking comfortable with foul language?", correct: "Fuck Yeah!", incorrect: "My mom doesn't like me to curse"} %>
   </ul>
 
   <a class="btn btn-success btn-large" href="/code">Get on with it</a>
